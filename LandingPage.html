@@ -1,40 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'YOUR_TRACKING_ID');
+    </script>
+    <!-- End Google Analytics -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Book Title</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-            background-color: #f4f4f4;
-        }
-        h1 {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
             color: #333;
+            text-align: center;
         }
-        .download-button {
+        header {
             background-color: #007BFF;
             color: white;
-            padding: 15px 25px;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .download-button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
             text-decoration: none;
             border-radius: 5px;
+            font-size: 1.2em;
+            margin: 20px 0;
             display: inline-block;
-            margin-top: 20px;
+            transition: background-color 0.3s ease;
         }
         .download-button:hover {
-            background-color: #0056b3;
+            background-color: #218838;
+        }
+        footer {
+            margin-top: 40px;
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+        .license {
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>Your Book Title</h1>
-    <p>Welcome! This is a free resource for students at [Your University].</p>
-    <p>Click the button below to download the book:</p>
+    <header>
+        <h1>Your Book Title</h1>
+        <h2>A Free Resource for [Your University] Students</h2>
+    </header>
     
-    <a class="download-button" href="https://your-link-to-the-book.com" target="_blank">Download Now</a>
-
-</body>
+    <div class="content">
+        <p>Welcome! This is a comprehensive guide designed to help students at <strong>[Your University]</strong> excel in their studies. This book covers key concepts and strategies that have proven effective in understanding and mastering course material.</p>
+        
+        <p><strong>Why This Book?</strong></p>
+        <ul>
+            <li>**Tailored for [Your University] Students**: Written specifically with your curriculum in mind.</li>
+            <li>**Clear Explanations**: Complex concepts are broken down into easy-to-understand sections.</li>
+            <li>**Free Access**: Available at no cost to all students.</li>
+        </ul>
+    
+        <a class="download-button" href="https://your-link-to-the-book.com" target="_blank">Download Your Free Copy Now</a>
+    </div>
+    
+    <footer>
+        <p class="license">This work is licensed under a 
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+        </p>
+    </footer>
+    
+    </body>
 </html>
