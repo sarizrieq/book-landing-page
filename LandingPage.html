@@ -14,12 +14,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Book Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+            background-color: #f4f4f9;
             color: #333;
             text-align: center;
         }
@@ -33,10 +34,6 @@
             margin: 0;
             font-size: 2.5em;
         }
-        h2 {
-            font-size: 1.5em;
-            margin: 10px 0;
-        }
         .content {
             max-width: 800px;
             margin: 40px auto;
@@ -45,69 +42,66 @@
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
+        h2 {
+            font-size: 1.5em;
+        }
         p {
             font-size: 1.1em;
             line-height: 1.6;
         }
-        .download-button {
-            background-color: #28a745;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            margin: 20px 0;
-            display: inline-block;
-            transition: background-color 0.3s ease;
+        .license-details {
+            margin-top: 20px;
         }
-        .download-button:hover {
-            background-color: #218838;
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
         footer {
             margin-top: 40px;
             padding: 10px;
             background-color: #f1f1f1;
-        }
-        .license {
-            margin-top: 20px;
             font-size: 0.9em;
-        }
-        /* Responsive Styles */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2em;
-            }
-            h2 {
-                font-size: 1.2em;
-            }
         }
     </style>
 </head>
-<body>
+    <body>
 
-    <header>
-        <h1>Your Book Title</h1>
-        <h2>A Free Resource for [Your University] Students</h2>
-    </header>
-    
-    <div class="content">
-        <p>Welcome! This is a comprehensive guide designed to help students at <strong>[Your University]</strong> excel in their studies. This book covers key concepts and strategies that have proven effective in understanding and mastering course material.</p>
-        
-        <p><strong>Why This Book?</strong></p>
-        <ul>
-            <li>**Tailored for [Your University] Students**: Written specifically with your curriculum in mind.</li>
-            <li>**Clear Explanations**: Complex concepts are broken down into easy-to-understand sections.</li>
-            <li>**Free Access**: Available at no cost to all students.</li>
-        </ul>
-    
-        <a class="download-button" href="https://your-link-to-the-book.com" target="_blank">Download Your Free Copy Now</a>
-    </div>
-    
-    <footer>
-        <p class="license">This work is licensed under a 
-            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
-        </p>
-    </footer>
-    
+        <header>
+            <h1>License for Your Book Title</h1>
+        </header>
+
+        <div class="content">
+            <h2>Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)</h2>
+
+            <p>This book is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</p>
+
+            <p>You are free to:</p>
+            <ul>
+                <li><strong>Share</strong> — Copy and redistribute the material in any medium or format</li>
+                <li><strong>Adapt</strong> — Remix, transform, and build upon the material</li>
+            </ul>
+
+            <p>Under the following terms:</p>
+            <ul>
+                <li><strong>Attribution</strong> — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</li>
+                <li><strong>NonCommercial</strong> — You may not use the material for commercial purposes.</li>
+            </ul>
+
+            <p>No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</p>
+
+            <p class="license-details">
+                To view a copy of this license, visit the official <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons website</a>.
+            </p>
+        </div>
+
+        <footer>
+            <p>&copy; [Year], [Your Name]. This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License.</p>
+        </footer>
+
     </body>
 </html>
+
+
