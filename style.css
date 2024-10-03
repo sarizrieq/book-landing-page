@@ -133,8 +133,8 @@
         text-align: left;
         position: relative;
         max-width: fit-content;
-        bottom: 35%;
-        left: 0%;
+        bottom: 25%;
+        left: -15%;
     }
   
     h1 {
@@ -146,8 +146,9 @@
     }
 
     button {
-        width: 60%;
-        font-size: 1.7em;
+        width: 75%;
+        text-align: center;
+        font-size: 1.5em;
     }
   
     .about-section p {
@@ -156,7 +157,8 @@
   
     .book-cover {
         width: 30%; /* Larger size on bigger screens */
-        bottom: 92%;
+        bottom: 95%;
+        right: 10%;
     }
   }
   
