@@ -133,20 +133,21 @@
         text-align: left;
         position: relative;
         max-width: fit-content;
-        bottom: 0%;
+        bottom: 35%;
         left: 0%;
     }
   
     h1 {
-      font-size: 2em;
+      font-size: 1.8em;
     }
   
     .about-section h2 {
-      font-size: 1.8em;
+      font-size: 1.5em;
     }
 
     button {
-        font-size: 2em;
+        width: 60%;
+        font-size: 1.7em;
     }
   
     .about-section p {
