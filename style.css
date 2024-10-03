@@ -1,0 +1,182 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html{
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #637489;
+  }
+  
+  /* First Section Styles */
+  .header-section {
+    background-image: url('https://github.com/sarizrieq/book-landing-page/blob/main/background.png?raw=true'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    padding: 60px 20px;
+    position: relative;
+  }
+  
+  .header-section .content {
+    display: flex;
+    left: 10%;
+    position: relative;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+  }
+  
+  h1 {
+    font-size: 2.8em;
+    font-weight: bolder;
+  }
+  
+  p.author {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  button {
+    background-color: #f2f4f7;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: none;
+    font-size: 2.8em;
+    font-weight: bolder;
+    color: #637489;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 80%;
+  }
+  
+  button:hover {
+    background-color: #f2f4f7;
+  }
+  
+  /* Second Section Styles (About Section) */
+  .about-section {
+    background-color: #f9f9f9; /* Off-white background */
+    background-size: cover;
+    height: 50%;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+  }
+
+  .about-container {
+    text-align: left;
+    position: relative;
+    max-width: fit-content;
+    bottom: 0%;
+    left: 9%;
+  }
+  
+  .about-section h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .about-section p {
+    font-size: 1.2em;
+    color: #4f617d;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Book Cover Image Styles */
+  .book-cover {
+    width: 25%;
+    position: absolute;
+    bottom: 150%;
+    left: 80%;
+    transform: translateX(-50%);    
+  }
+  
+  /* Responsive Layout for Vertical Devices */
+  @media (max-width: 768px) {
+    .header-section {
+      padding: 40px 20px;
+    }
+
+    .about-section {
+        bottom: 0%;
+        width: 100%;
+        padding: 80px;
+    }
+  
+    h1 {
+      font-size: 2em;
+    }
+  
+    .about-section h2 {
+      font-size: 1.8em;
+    }
+
+    button {
+        font-size: 2em;
+    }
+  
+    .about-section p {
+      font-size: 1em;
+    }
+  
+    .book-cover {
+        width: 30%; /* Larger size on bigger screens */
+        bottom: 92%;
+    }
+  }
+  
+  /* Responsive Layout for Horizontal Devices */
+  @media (min-width: 769px) {
+    .header-section {
+      flex-direction: row;
+    }
+  
+    .header-section .content {
+      max-width: 50%;
+    }
+  
+    h1 {
+      font-size: 3em;
+    }
+  
+    .about-section {
+      padding: 60px 40px;
+      width: 100%;
+    }
+  
+    .about-section p {
+      font-size: 1.2em;
+    }
+  
+    .book-cover {
+      width: 18%; /* Larger size on bigger screens */
+      bottom: 80%;
+    }
+  }
+  
