@@ -1,7 +1,7 @@
 name: Increment Click Count
 
 on:
-  repository_dispatch: # Trigger the workflow via the GitHub API
+  workflow_dispatch:  # Manual trigger; you can also set it to respond to webhooks
 
 jobs:
   increment_count:
@@ -21,4 +21,4 @@ jobs:
 
       - name: Run Increment Script
         run: |
-          python increment_click_count.py
+          python increment_counter.py
