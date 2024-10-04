@@ -1,17 +1,22 @@
-def increment_click_count():
-    try:
-        # Read the current count
-        with open('counter.txt', 'r') as file:
-            count = int(file.read().strip())
-    except FileNotFoundError:
-        count = 0  # If the file doesn't exist, start from 0
+import json
+import os
 
-    # Increment the count
-    count += 1
+# Path to the count file
+count_file_path = 'download_count.json'
 
-    # Write the new count back to the file
-    with open('counter.txt', 'w') as file:
-        file.write(str(count))
+# Load the current count
+if os.path.exists(count_file_path):
+    with open(count_file_path, 'r') as f:
+        data = json.load(f)
+        download_count = data.get('count', 0)
+else:
+    download_count = 0
 
-if __name__ == "__main__":
-    increment_click_count()
+# Increment the count
+download_count += 1
+
+# Save the new count
+with open(count_file_path, 'w') as f:
+    json.dump({'count': download_count}, f)
+
+print(f'Download count updated to: {download_count}')
