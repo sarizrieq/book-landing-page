@@ -12,6 +12,7 @@ body {
 
 .about-container {
     max-width: 900px;
+    bottom: 70%;
     margin: 40px auto;
     padding: 20px;
     background-color: #fff;
