@@ -1,5 +1,5 @@
 function triggerGitHubAction() {
-    const url = `https://api.github.com/repos/yourusername/yourrepo/dispatches`; // Replace with your repo URL
+    const url = `https://github.com/sarizrieq/book-landing-page.git`; // Replace with your repo URL
     const token = 'YOUR_GITHUB_TOKEN'; // Use a personal access token with repo scope
 
     fetch(url, {
