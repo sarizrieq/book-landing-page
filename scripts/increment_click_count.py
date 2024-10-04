@@ -1,23 +1,17 @@
-def increment_click_count(file_path):
+def increment_click_count():
     try:
         # Read the current count
-        with open(file_path, 'r') as file:
+        with open('counter.txt', 'r') as file:
             count = int(file.read().strip())
+    except FileNotFoundError:
+        count = 0  # If the file doesn't exist, start from 0
 
-        # Increment the count
-        count += 1
+    # Increment the count
+    count += 1
 
-        # Write the updated count back to the file
-        with open(file_path, 'w') as file:
-            file.write(str(count))
+    # Write the new count back to the file
+    with open('counter.txt', 'w') as file:
+        file.write(str(count))
 
-        return count
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        return None
-
-# Example usage
 if __name__ == "__main__":
-    count = increment_click_count("click_count.txt")
-    if count is not None:
-        print(f"Button has been clicked {count} times.")
+    increment_click_count()
