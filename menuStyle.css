@@ -6,7 +6,6 @@
     text-align: left; /* Ensure left-to-right text alignment */
     direction: ltr; /* Explicitly set left-to-right text direction */
     padding-left: 40px; /* Space for the background image */
-    background: url('path-to-your-image.png') no-repeat left center; /* Background image */
     background-size: 30px; /* Size of the image */
 }
 
@@ -18,6 +17,27 @@
     align-items: center;
     display: flex;
 }
+
+/* For screens smaller than 600px */
+@media (max-width: 600px) {
+    .menu-item a {
+        font-size: 1.5rem; /* Smaller size */
+    }
+  }
+  
+  /* For screens between 600px and 900px */
+  @media (min-width: 601px) and (max-width: 900px) {
+    .menu-item a {
+        font-size: 2rem; /* Medium size */
+    }
+  }
+  
+  /* For screens larger than 900px */
+  @media (min-width: 901px) {
+    .menu-item a {
+        font-size: 2.5rem; /* Larger size */
+    }
+  }
 
 .menu-item img {
     margin-right: 20px; /* Adjust the value to increase or decrease the space */
@@ -31,7 +51,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to left, rgb(221, 227, 233, 0.9), rgba(82, 98, 119, 0.9));
+    background: linear-gradient(to left, rgba(161, 182, 196, 0.9), rgba(82, 98, 119, 0.9));
     z-index: 999; /* Ensure mobile menu is below hamburger */
 }
 
