@@ -108,7 +108,7 @@
     text-align: left;
     position: relative;
     max-width: fit-content;
-    font-size: 1.5em;
+    font-size: 2.25vw;
     bottom: 0%;
     left: 9%;
   }
@@ -139,27 +139,6 @@
   font-size: clamp(14px, 2.5vw + 1rem, 20px); /* Responsive text */
   line-height: 1.5; /* Better readability */
   padding: 10px; /* Optional padding */
-}
-
-/* For screens smaller than 600px */
-@media (max-width: 600px) {
-  .about-container {
-      font-size: 0.8vw; /* Smaller size */
-  }
-}
-
-/* For screens between 600px and 900px */
-@media (min-width: 601px) and (max-width: 900px) {
-  .about-container {
-      font-size: 1.1vw; /* Medium size */
-  }
-}
-
-/* For screens larger than 900px */
-@media (min-width: 901px) {
-  .about-container {
-      font-size: 1.25vw; /* Larger size */
-  }
 }
   
   /* Responsive Layout for Vertical Devices */
