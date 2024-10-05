@@ -41,20 +41,6 @@
             <h1>Matam Guide</h1>
             <p class="author">by Sari Zrieq</p>
             <button id="downloadBtn" onclick="downloadBook()">Download</button>
-
-            <script>
-                document.getElementById('downloadBtn').addEventListener('click', function() {
-                    // Increment counter by making a request to the Google Apps Script URL
-                    
-                    
-                    // Create a temporary <a> element to trigger the download
-                    const link = document.createElement('a');
-                    link.href = 'path/to/your/file.pdf'; // Replace with actual PDF file path
-                    link.download = 'MatamGuide_SariZreiq.pdf'; // This will be the name of the downloaded file
-                    link.click(); // Programmatically click the link to trigger the download
-                });
-            </script>
-
             <script>
                 // Add event listener to button
                 document.getElementById('downloadBtn').addEventListener('click', function() {
