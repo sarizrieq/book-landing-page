@@ -137,7 +137,7 @@
 
 .about-container p {  
   font-size: clamp(14px, 2.5vw + 1rem, 20px); /* Responsive text */
-  line-height: 1.5; /* Better readability */
+  line-height: 2; /* Better readability */
   padding: 10px; /* Optional padding */
 }
   
