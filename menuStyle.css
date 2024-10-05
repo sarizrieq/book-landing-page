@@ -1,32 +1,26 @@
 /* General Menu Styles */
-.menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.menu ul li {
-    margin-right: 20px;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    color: #333;
-}
-
-.desktop-menu {
-    background-color: #526277;
-    padding: 20px;
-}
-
-.desktop-menu ul {
+.menu-item {
     display: flex;
-    justify-content: space-around; /* Horizontal layout */
+    align-items: center; /* Center icon and text vertically */
+    margin: 30px 0; /* Space between items */
+    text-align: left; /* Ensure left-to-right text alignment */
+    direction: ltr; /* Explicitly set left-to-right text direction */
+    padding-left: 40px; /* Space for the background image */
+    background: url('path-to-your-image.png') no-repeat left center; /* Background image */
+    background-size: 30px; /* Size of the image */
 }
 
-.desktop-menu ul li a {
+.menu-item a {
+    text-decoration: none;
     color: white;
-    font-size: 1.7em;
+    font-size: 2.5rem; /* Bigger text for mobile */
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+
+.menu-item img {
+    margin-right: 20px; /* Adjust the value to increase or decrease the space */
 }
 
 /* Hide Mobile Menu and Hamburger by Default */
@@ -37,72 +31,92 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Dark overlay */
-    z-index: 999;
-    padding-top: 100px; /* Optional: Push content down if needed */
+    background: linear-gradient(to left, rgb(221, 227, 233, 0.9), rgba(82, 98, 119, 0.9));
+    z-index: 999; /* Ensure mobile menu is below hamburger */
 }
 
-.mobile-menu ul {
+/* Mobile Menu default state (hidden) */
+.mobile-menu.active {
+    display: flex; /* Show the mobile menu when the hamburger is clicked */
+}
+
+/* Center the content inside the menu */
+.phone-container {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0; /* Remove padding */
     display: flex;
-    flex-direction: column; /* Vertical layout */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-    height: 100%; /* Full screen height */
-    margin: 0; /* Reset default margin */
-    padding: 0; /* Reset default padding */
-}
-
-.mobile-menu ul li {
-    margin: 60px 0; /* Space between the items */
-}
-
-.phone-container{
-    display: flex;
-    align-items: center; 
-    height: 100vh; 
-    width: 100vw; 
-}
-
-.mobile-menu ul li a {
-    position: fixed;
-    left: 30%;
-    color: white;
-    font-size: 2rem; /* Bigger text for mobile */
-    text-decoration: none;
-}
-
-/* Hamburger Icon */
-.hamburger {
-    display: none;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+}
+
+/* Hamburger Menu */
+.hamburger {
+    width: 35px;
+    height: 30px;
+    margin: 10px; /* Adjust margin as needed */
+    position: absolute; /* Change to absolute positioning */
+    top: 2%; /* Position from the top */
+    left: 2%; /* Position from the left */
     cursor: pointer;
-    padding: 10px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 1000;
+    display: inline-block;
+    z-index: 1001; /* Ensure hamburger is above the mobile menu */
 }
 
 .hamburger span {
-    background-color: #526277;
-    width: 30px;
-    height: 3px;
-    margin: 5px 0;
-    transition: all 0.3s ease;
+    background-color: #637489;
+    position: absolute;
+    border-radius: 2px;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+    width: 100%;
+    height: 4px;
+    transition-duration: 500ms;
 }
 
-/* Show Hamburger and Mobile Menu on Small Screens */
-@media only screen and (max-width: 768px) {
-    .desktop-menu {
-        display: none; /* Hide desktop menu */
-    }
+.hamburger.active span {
+    background-color: white; /* Change to white when active */
+}
 
-    .hamburger {
-        display: flex; /* Show hamburger icon */
-    }
+.hamburger span:nth-child(1) {
+    top: 0px;
+    left: 0px;
+}
 
-    /* Mobile Menu default state (hidden) */
-    .mobile-menu.active {
-        display: flex; /* Show the mobile menu when the hamburger is clicked */
-    }
+.hamburger span:nth-child(2) {
+    top: 13px;
+    left: 0px;
+    opacity: 1;
+}
+
+.hamburger span:nth-child(3) {
+    bottom: 0px;
+    left: 0px;
+}
+
+.hamburger:not(.active):hover span:nth-child(1) {
+    transform: rotate(-3deg) scaleY(1.1);
+}
+
+.hamburger:not(.active):hover span:nth-child(2) {
+    transform: rotate(3deg) scaleY(1.1);
+}
+
+.hamburger:not(.active):hover span:nth-child(3) {
+    transform: rotate(-4deg) scaleY(1.1);
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 13px; /* Center the first line */
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0; /* Hide the middle line */
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 13px; /* Center the last line */
 }
