@@ -11,6 +11,7 @@
   }
 
   body {
+    background-color: #F0F3F5;
     height: 100%;
     overflow-x: hidden;
     font-family: 'Arial', sans-serif;
@@ -134,8 +135,7 @@
     transform: translateX(-50%);    
   }
 
-.about-container p {
-  font-size: 2.5vw; /* Adjust as needed */
+.about-container p {  
   line-height: 1.5; /* For better readability */
   padding: 10px; /* Optional: Add some padding */
 }
@@ -143,21 +143,21 @@
 /* For screens smaller than 600px */
 @media (max-width: 600px) {
   .about-container p {
-      font-size: 14px; /* Smaller size */
+      font-size: 1.4vw; /* Smaller size */
   }
 }
 
 /* For screens between 600px and 900px */
 @media (min-width: 601px) and (max-width: 900px) {
   .about-container p {
-      font-size: 18px; /* Medium size */
+      font-size: 1.8vw; /* Medium size */
   }
 }
 
 /* For screens larger than 900px */
 @media (min-width: 901px) {
   .about-container p {
-      font-size: 20px; /* Larger size */
+      font-size: 2vw; /* Larger size */
   }
 }
   
