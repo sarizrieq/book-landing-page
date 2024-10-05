@@ -1,62 +1,65 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <script src="https://kit.fontawesome.com/628c8d2499.js" crossorigin="anonymous"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matam Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menuStyle.css">
+</head>
+<body>
+    <!-- Hamburger Icon (Visible on Mobile) -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>About Me - Sari Zrieq</title>
-
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="menuStyle.css" type="text/css" />
-        <link rel="stylesheet" href="AboutMeStyle.css" type="text/css" />
-    </head>
-    <body>
-        <!-- Hamburger Icon (Visible on Mobile) -->
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <!-- Mobile Menu (Initially Hidden) -->
-        <nav class="mobile-menu" id="mobile-menu">
+    <!-- Mobile Menu (Initially Hidden) -->
+    <nav class="mobile-menu" id="mobile-menu">
+        <div class="phone-container">
             <ul>
-                <div class="phone-container">   
-                    <div>
-                        <li><a href="https://sarizrieq.github.io/book-landing-page/MatamBook">Matam Guide</a></li>
-                        <li><a href="https://sarizrieq.github.io/book-landing-page/index">About Me</a></li>
-                    </div>             
-                    
-                </div>
+                <li class="menu-item">
+                    <a href="https://sarizrieq.github.io/book-landing-page/MatamBook">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAACO0lEQVR4nO3YO2gVQRQG4JvEJlFBYxGIYmEhRFTQdAaDEcVCCaQQJKVCGuMLxAhaWGiXKgrx0frAyi5NEMUHKKZKrRgwoE0w4APUyCeDZ2Vzubm51wgK7g/D7s6c85+fmfmLPaVSgf8N6MAEHmEcdzCMQexB6xK412BvcA0H93jUSjU7aiHp9BMzmFUZL3EDB9FShWt5xKTYVwtwzUathM56BA7EdyPWowfHcRtTuQIfcQv7IzaNAxGX1jJMxdwx7ArOxqgx8NsCq8S14wjG8CW3s2mIubGIaV+Eq7pA9GV3oFaBZfmrcRLvY5zAqjryfwnMeaBvoYC6BWYI4olSnVi0fiFwERQ7mKG4gwoXV0ZhkgyFSRQmqYzCJBkKkyhMUhmFSTIUJjHfJFfQhY1YUfrDO4iVwd0Vter+aSrHZ7zAKA5jc60CU2z8H49GTOKqhJoEtsSzG/vQj7O4jif4VNYtuBydgoZMYLz3xFq+C5FyH+NacPZHje6y2gsK7I0GT3OVo1kWJEN4iO+5rsJMjKwPk9Ye4Ay2p9wqvM1Ru7eawDy+4Q2e4i4u4hC2oCmXuw6nMZnLnYy5tbm4JmwNjkvBmbinMVeh/jyBHSHyVOxMEjOCe3iOd2XJH3Af57AtHWnw7E4j3hti7XzEppw83uJZ1BiJmkOhYaCmVlzZEbTGXRmMblb+bk2HAXaEK6/GXIbXuImj2LmUHmO9ojdEoyg1Ib/mBM2FWS5gU+lfANriiJIh2v62ngKlwA+aW6mwsqzGBwAAAABJRU5ErkJggg==">
+                        <p>Matam Guide</p>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAACiElEQVR4nO2YTWsUQRCGR4U1YtR4EFy9iIJeg38iKopoCP4Cb0FFol6zPyJ6y2mFsIogRONVD6IoqPGwfiSe1IMmNw8ShUea1EpbzExX90zCgvvCwAx0VT3TXV39kWUDDVQsYDdwCrgB3ARuA215vwaMATuzzRSwDbgAPAJ+EdZP4AFwFti60XDngSXS9RY4ERiRqylge4F7JYFXgEXpqfvAE+B7SftZYDgH7inQiYU7UtBry8A0MFpie1Ty07XVegUcVHBEAQrcV+X4GzAJNCLz9mJOr34EjnlwdkAZVt1zztF+8x8qAU3gsfL5W32bAXXOdYChkvYdSxBgeyCfw4DAeE7PFcLFAErbfcCPJEDJlyWVc8Fhxd6D/oRIAnRF2NdkCM4KaIAzAboVoqdl62wlAGiEKwcUJ/7yNW2Bi83BZMnC72u03wCve0FWIm07mwF4ywvyuh8B216QhQi7EaDbl4Csw71QuTsbGXfBs23XNsTkw7nvkUjAN579TC2TpEa4LcCq52OqrPFJS5lx63IdcE7AceVnLCsSsMtaqGWzWglO/LT+eoE1vdMOJeynsqWOdcgqcA2J0dO8xWiCf3Up0H4oBU5sr6hY4xYjt936oLZbzVSIIgEH5LDVU9d8LAXOqT97CewwGRskk+yZinEm1sld5eBOleFUcNr3XBYrqXP+UCN/3aw4rM+Vz3dum5fq8DDwRTl0R8fLkcfOhkwIP+ecPgOHkuAUpO5JpDy0XKENFOGWKiV+z1WD8wLtUdsprVW5+ngoz6JavrTmkoc1AOpuqN6Tri5wunawnDo5IRdFawYo12Zeztobe/2WAzvsrtPksnJG9pNteZ+SC8zytXWg/11/AHgDkQEdpQ/xAAAAAElFTkSuQmCC">
+                        Other Projects Soon
+                    </a>
+                </li>
             </ul>
-        </nav>
-
-        <!-- Desktop Menu (Always Visible on Desktop) -->
-        <nav class="desktop-menu">
-            <ul>
-                <li><a href="https://sarizrieq.github.io/book-landing-page/MatamBook">Matam Guide</a></li>
-                <li><a href="https://sarizrieq.github.io/book-landing-page/index">About Me</a></li>
-            </ul>
-        </nav>
-
-        <script src="script.js"></script>
-
-        <div class="outer-container">
-            <div class="about-container">
-                <h1>About Me</h1>
-                <div class="text-container">
-                    <p>
-                        Hey there! I'm Sari Zrieq, a passionate Computer Science Student. And I would like to share the projects I do with other people.<br> 
-
-                        I'm always excited to connect with fellow learners, creators, and problem-solvers, so feel free to reach out!<br>
-
-                        Feel free to <a href="mailto:sarizrieqbook@gmail.com">contact me</a> if you have any thoughts or feedback. I'd love to hear from you!
-                    </p>
-                </div>
-            </div>
         </div>
-    </body>
+    </nav>   
+
+    <!-- Header Section -->
+    <div class="container header-section">
+        <div class="content">
+            <h1>Matam Guide</h1>
+            <p class="author">by Sari Zrieq</p>
+            <button onclick="downloadBook()">Download</button>
+
+            <script>
+                function downloadBook() {
+                    const pdfLink = 'book-link.pdf';
+                    window.open(pdfLink, '_blank');
+                }
+            </script>
+        </div>
+    </div>
+    <!-- About the Book Section -->
+    <div class="container about-section">
+        <img src="https://github.com/sarizrieq/book-landing-page/blob/main/BookMockup.png?raw=true" alt="Exam Compass Book Cover" class="book-cover"> <!-- Book cover image -->
+        <div class = "about-container">
+            <p>
+                Feel free to <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sari.projects.supp@gmail.com&su=MatamGuide%20Book%20Feedback" target="_blank">contact me</a> if you have any thoughts or feedback. I'd love to hear from you!<br>
+                you can also contact me using email at: sari.projects.supp@gmail.
+            </p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
