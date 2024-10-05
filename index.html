@@ -40,13 +40,17 @@
         <div class="content">
             <h1>Matam Guide</h1>
             <p class="author">by Sari Zrieq</p>
-            <button onclick="downloadBook()">Download</button>
+            <button id="downloadBtn" onclick="downloadBook()">Download</button>
 
             <script>
-                function downloadBook() {
-                    const pdfLink = 'book-link.pdf';
-                    window.open(pdfLink, '_blank');
-                }
+                // Add event listener to button
+                document.getElementById('downloadBtn').addEventListener('click', function() {
+                    // Create a temporary <a> element to trigger the download
+                    const link = document.createElement('a');
+                    link.href = 'https://drive.google.com/uc?id=1HF60wr_5kVLfBdQN8_zUSdS54VBOa7AO'; // Replace with actual PDF file path
+                    link.download = 'MatamGuide_SariZreiq.pdf'; // This will be the name of the downloaded file
+                    link.click(); // Programmatically click the link to trigger the download
+                });
             </script>
         </div>
     </div>
@@ -63,3 +67,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+
