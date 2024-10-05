@@ -143,21 +143,21 @@
 /* For screens smaller than 600px */
 @media (max-width: 600px) {
   .about-container p {
-      font-size: 0.8em; /* Smaller size */
+      font-size: 14px; /* Smaller size */
   }
 }
 
 /* For screens between 600px and 900px */
 @media (min-width: 601px) and (max-width: 900px) {
   .about-container p {
-      font-size: 1em; /* Medium size */
+      font-size: 18px; /* Medium size */
   }
 }
 
 /* For screens larger than 900px */
 @media (min-width: 901px) {
   .about-container p {
-      font-size: 1.2em; /* Larger size */
+      font-size: 20px; /* Larger size */
   }
 }
   
